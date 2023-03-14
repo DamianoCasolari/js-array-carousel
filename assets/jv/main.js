@@ -12,6 +12,7 @@ let activeImg = 0;
 for (let i = 0; i < listImgEl.length; i++) {
     // imagesContainerEl.innerHTML += `<img class="img-fluid ${i == activeImg ? 'active' : ''}" src="${listImgEl[i]}" alt="imagin_${i}">`   OTHER OPTION
     imagesContainerEl.insertAdjacentHTML('beforeend', `<img class="img-fluid ${i == activeImg ? 'active' : ''}" src="${listImgEl[i]}" alt="imagine_${i}">`)
+    
 }
 
 const btnPrevEl = document.querySelector(".prev")
@@ -44,7 +45,7 @@ btnPrevEl.addEventListener("click", function () {
     currentImg.classList.remove("active");
     activeImg--;
     if (activeImg < 0) {
-        activeImg = 4;
+        activeImg = listImagesDom.length - 1;
         const newImg = listImagesDom[activeImg]
         newImg.classList.add("active");
     } else {
@@ -55,3 +56,14 @@ btnPrevEl.addEventListener("click", function () {
     console.log(activeImg)
 
 })
+
+
+// ciclo for per i thumbnails 
+
+const imagesthumbEl = document.querySelector(".thumb_nail_container")
+
+for (let i = 0; i < listImgEl.length; i++) {
+    imagesthumbEl.innerHTML += `<div class="thumb_img"><img class="img-fluid ${i == activeImg ? 'bored-3 ' : ''}" src="${listImgEl[i]}" alt="imagine_${i}">
+    </div>`;
+   
+}
