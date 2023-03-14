@@ -1,0 +1,19 @@
+/* General selector */
+
+body {
+    /* font-family: 'Livvic', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+
+.images img:not(.active) {
+    display: none;
+}
+
+
+
+
+/* ANIMATION */
+
+.slider:hover button {
+    visibility: visible !important;
+}
