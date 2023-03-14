@@ -58,10 +58,13 @@ btnPrevEl.addEventListener("click", function () {
 })
 
 
-// ciclo for per i thumbnails 
+// ciclo for per creare i thumbnails 
 
 const imagesthumbEl = document.querySelector(".thumb_nail_container")
 
 for (let i = 0; i < listImgEl.length; i++) {
-   imagesthumbEl.innerHTML += `<div class="thumb_img" style="background-image:url('${listImgEl[i]}')"></div>`;
+   imagesthumbEl.innerHTML += `<div class="thumb_img ${i == activeImg ? 'selected' : ''}" style="background-image:url('${listImgEl[i]}')"></div>`;
+
 }
+
+// ciclo for per overlay i thumbnails 
