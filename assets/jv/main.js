@@ -9,9 +9,12 @@ const listImgEl = [
 const imagesContainerEl = document.querySelector(".images")
 let activeImg = 0;
 
+// ciclo per creare le immagini principali
+
 for (let i = 0; i < listImgEl.length; i++) {
     // imagesContainerEl.innerHTML += `<img class="img-fluid ${i == activeImg ? 'active' : ''}" src="${listImgEl[i]}" alt="imagin_${i}">`   OTHER OPTION
-    imagesContainerEl.insertAdjacentHTML('beforeend', `<img class="img-fluid ${i == activeImg ? 'active' : ''}" src="${listImgEl[i]}" alt="imagine_${i}">`)
+    let classEl = i == activeImg ? 'active' : '';
+    imagesContainerEl.insertAdjacentHTML('beforeend', `<img class="img-fluid ${classEl}" src="${listImgEl[i]}" alt="imagine_${i}">`);
     
 }
 
@@ -20,7 +23,8 @@ for (let i = 0; i < listImgEl.length; i++) {
 const imagesthumbEl = document.querySelector(".thumb_nail_container")
 
 for (let i = 0; i < listImgEl.length; i++) {
-   imagesthumbEl.innerHTML += `<div class="thumb_img ${i == activeImg ? 'selected' : ''}" style="background-image:url('${listImgEl[i]}')"></div>`;
+   let classSelectedEl = i == activeImg ? 'selected' : '';
+   imagesthumbEl.innerHTML += `<div class="thumb_img ${classSelectedEl}" style="background-image:url('${listImgEl[i]}')"></div>`;
 
 }
 
@@ -82,4 +86,3 @@ btnPrevEl.addEventListener("click", function () {
 
 
 
-// ciclo for per overlay i thumbnails 
