@@ -9,9 +9,12 @@ body {
     display: none;
 }
 
+
 .thumb_img {
-    
-   
+
+    flex-grow: 1;
+    background-size: cover;
+    background-position: center;
 
 }
 

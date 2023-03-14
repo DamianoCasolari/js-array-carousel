@@ -63,7 +63,5 @@ btnPrevEl.addEventListener("click", function () {
 const imagesthumbEl = document.querySelector(".thumb_nail_container")
 
 for (let i = 0; i < listImgEl.length; i++) {
-    imagesthumbEl.innerHTML += `<div class="thumb_img"><img class="img-fluid ${i == activeImg ? 'bored-3 ' : ''}" src="${listImgEl[i]}" alt="imagine_${i}">
-    </div>`;
-   
+   imagesthumbEl.innerHTML += `<div class="thumb_img" style="background-image:url('${listImgEl[i]}')"></div>`;
 }
