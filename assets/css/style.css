@@ -14,6 +14,10 @@ body {
     filter: brightness(0.2);
 }
 
+.selected {
+    box-shadow: 2px 2px 4px black;
+}
+
 
 .thumb_img {
 
